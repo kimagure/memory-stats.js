@@ -16,18 +16,18 @@ Like [stats.js](https://github.com/mrdoob/stats.js/) but for JS memory
 That might look something like:
 
 ```js
-    var stats = new MemoryStats();
+var stats = new MemoryStats();
 
-    stats.domElement.style.position = 'fixed';
-    stats.domElement.style.right        = '0px';
-    stats.domElement.style.bottom       = '0px';
+stats.domElement.style.position = 'fixed';
+stats.domElement.style.right = '0px';
+stats.domElement.style.bottom = '0px';
     
-    document.body.appendChild( stats.domElement );
+document.body.appendChild(stats.domElement);
 
-    requestAnimationFrame(function rAFloop(){
-        stats.update();
-        requestAnimationFrame(rAFloop);
-    });
+requestAnimationFrame(function rAFloop(){
+    stats.update();
+    requestAnimationFrame(rAFloop);
+});
 ```
 
 Run Chrome with the flag and open `demo/index.html` to see it in action.
